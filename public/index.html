@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat app</title>
+    <style>
+        #container {
+          width: 700px;
+          margin: 0 auto;
+        }
+        .chat-input {
+          width: 300px;
+          height: 35px;
+          border: solid 1px #444;
+        }
+        .chat-submit {
+          width: 50px;
+          height: 35px;
+          border: solid 1px #444;
+        }
+        .chat-window {
+          height: 300px;
+          width: 400px;
+        }
+        #chatSection {
+          float: left;
+          border: 1px grey solid;
+          border-radius: 10px;
+          padding: 10px;
+        }
+    </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="container" class="container mx-auto">
+      <h1 class="font-bold">
+        Nodejs + Socket Chat app
+      </h1>
+        <div id="chatSection" class="bg-gray-200">
+            <div class="chat-window "></div>
+            <form class="chat-form">
+                <label class="chat-label">
+                    Enter a message:
+                    <input type="text" class="chat-input rounded" />
+                </label>
+                <input type="submit" class="chat-submit bg-green-500 text-white rounded" value="enter" />
+            </form>
+      </div>
+    </div>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
